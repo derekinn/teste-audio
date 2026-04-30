@@ -3,32 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player de Áudio Simples</title>
+    <title>Player de Vídeo com Mux</title>
+    <!-- Adicione o Mux Player -->
+    <script src="https://cdn.mux.com/player.js"></script>
 </head>
 <body>
-    <h1>Player de Áudio</h1>
-    
-    <!-- Player para os áudios -->
-    
-    <audio controls>
-        <source src="https://drive.google.com/uc?export=download&id=17aY4tocAQNQ4ll_8CajL5eEm4ELt72im" type="audio/m4a">
-        Seu navegador não suporta o elemento de áudio.
-    </audio>
-    
-    <audio controls>
-        <source src="https://drive.google.com/uc?export=download&id=1TAlCpkqjOqEj0Q0FAdDKSH8Q2am8uOpe" type="audio/m4a">
-        Seu navegador não suporta o elemento de áudio.
-    </audio>
-
-    <audio controls>
-        <source src="https://drive.google.com/uc?export=download&id=1K4CSXyd5UIrR_-6AXsLEetNMtxuisrzD" type="audio/m4a">
-        Seu navegador não suporta o elemento de áudio.
-    </audio>
-
-    <audio controls>
-        <source src="https://drive.google.com/uc?export=download&id=1IOxC1kc8BA_IfdxlTTxrZoyGu9huGn5k" type="audio/mp3">
-        Seu navegador não suporta o elemento de áudio.
-    </audio>
-
+    <h1>Player de Vídeo</h1>
+    <!-- Adicione o Player do Mux -->
+    <div id="mux-player"></div>
+    <script>
+        const player = Mux.Player.create({
+            id: 'mux-player',
+            url: 'URL_DO_VIDEO_AQUI', 
+            width: 1280,  // 1280 pra 720p ou 1920 para 1080p
+            height: 720,  // 720 pra 720p ou 1080 para 1080p
+            autoplay: false,
+            muted: false,
+            controls: true,
+        });
+    </script>
 </body>
 </html>
