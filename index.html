@@ -3,24 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player de Vídeo com Mux</title>
-    <!-- Adicione o Mux Player -->
-    <script src="https://cdn.mux.com/player.js"></script>
+    <title>Reprodutor de Áudio</title>
 </head>
 <body>
-    <h1>Player de Vídeo</h1>
-    <!-- Adicione o Player do Mux -->
-    <div id="mux-player"></div>
-    <script>
-        const player = Mux.Player.create({
-            id: 'mux-player',
-            url: 'URL_DO_VIDEO_AQUI', 
-            width: 1280,  // 1280 pra 720p ou 1920 para 1080p
-            height: 720,  // 720 pra 720p ou 1080 para 1080p
-            autoplay: false,
-            muted: false,
-            controls: true,
-        });
-    </script>
+    <h1>Reprodutor de Áudio</h1>
+    <audio controls>
+        <source src="https://raw.githubusercontent.com/derekinn/spotifymusicplayer/main/songs/brx5.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
 </body>
 </html>
